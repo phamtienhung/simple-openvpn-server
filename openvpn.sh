@@ -227,6 +227,10 @@ remote-cert-tls server
 cipher AES-256-CBC
 setenv opt block-outside-dns
 key-direction 1
+route 0.0.0.0 192.0.0.0 net_gateway
+route 64.0.0.0 192.0.0.0 net_gateway
+route 128.0.0.0 192.0.0.0 net_gateway
+route 192.0.0.0 192.0.0.0 net_gateway
 verb 3" > /etc/openvpn/client-common.txt
 
 # Generates the custom client.ovpn
